@@ -224,7 +224,7 @@ body {
 }
 
 #learningsection {
-  display: block;
+  /* display: block; */
   grid-column: full--start / full--end;
   align-items: center;
   justify-items: center;
@@ -255,7 +255,7 @@ body {
 }
 
 .learningcard img {
-  display: block;
+  /* display: block; */
   width: 100%;
   height: auto;
 }
@@ -278,6 +278,13 @@ body {
   padding: 0 1rem 0.5rem 1rem;
   font-weight: 100;
 }
+.showcasecontainer a:link,
+.showcasecontainer a:active,
+.showcasecontainer a:visited {
+  text-decoration: none;
+}
+  
+
 /* End of Learning Section */
 
 /* Start of Thesis Section */
@@ -305,8 +312,7 @@ body {
 
 .thesis-title {
   grid-area: thesis-title;
-  /* display: block; */
-  text-align: center;
+text-align: center;
   font-size: 1.5rem;
   font-weight: 600;
   color: #484848;
@@ -315,13 +321,13 @@ body {
 
 .thesis-left {
   grid-area: thesis-left;
-  /* display: block; */
+  
 }
 
 .thesis-right {
   grid-area: thesis-right;
   background-color: #fff;
-  /* display: block */
+  
 }
 
 .thesis video {
@@ -345,12 +351,20 @@ body {
   font-weight: 100;
 }
 
+.thesis-right
+.event-block:first-child{
+  background-color: #d8d8d8; 
+} 
+
 .thesis-right .event-block {
-  background-color: #fff;
+  background-color: #ffffff;
 }
 
-.thesis-right .event-block:first-child {
-  background-color: #d8d8d8;
+.thesis-right a:link,
+.thesis-right a:active,
+.thesis-right a:visited h4 {
+  text-decoration: none;
+  color: #484848;
 }
 
 /* End of Thesis Section */
@@ -518,6 +532,7 @@ footer a:visited {
     margin-top: 0%;
     color: #484848;
     font-weight: bolder;
+    text-decoration: none;
   }
 
   .learning-mobile li {
@@ -529,6 +544,12 @@ footer a:visited {
     color: #fff;
     font-size: 1rem;
     font-weight: 600;
+    color: #484848;
+  }
+
+  .learning-mobile a:link
+  a.active, a:visited{
+    text-decoration: none;
     color: #484848;
   }
 
@@ -554,6 +575,12 @@ footer a:visited {
     font-size: 1.5rem;
     color: #484848;
     font-weight: bolder;
+  }
+
+  .learning-mobile a:link{
+    text-decoration: none;
+    color: #484848;
+
   }
   /* End of mobile-thesis */
 
