@@ -2,220 +2,574 @@
 @import url('href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Source+Sans+Pro:wght@300;400&display=swap"');
 
 /* Universal selector used to reset all margins */
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-html, body{
-    box-sizing: border-box;
-    font-family: "Lato", sans-serif;
-    font-size: 16px;
+html,
+body {
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
 }
 
-.container{
-    display: grid;
-    grid-template-columns: [full--start] 0.6fr [center--end center--start] 0.4fr [full--end];
-    grid-template-rows: repeat(6, min-content);
+.container {
+  display: grid;
+  grid-template-columns: [full--start] 0.6fr [center--end center--start] 0.4fr [full--end];
+  grid-template-rows: repeat(6, min-content);
 }
 
 /* Start of the Desktop View */
 /* **************************************************** */
 
 /* Start of the Desktop Nav */
-.desktop-nav{
-    grid-column: full--start / full--end;
-    background-color: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 4rem;
+.desktop-nav {
+  grid-column: full--start / full--end;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem;
 }
 
-.desktop-nav > a{
-    text-decoration: none;
-    display: flex;
-    align-items: center;
+.desktop-nav > a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
 }
 
-.logo{
-    height: 2rem;
-    width: auto;
-    padding-left: 1.5rem;
-}
-.logo-name{
-    font-size: 1rem;
-    text-transform: uppercase;
+.logo {
+  height: 2rem;
+  width: auto;
+  padding-left: 1.5rem;
 }
 
-.logo-name-bold{
-    font-weight: bold;
-    color:#484848;
+.logo-name {
+  font-size: 1rem;
+  text-transform: uppercase;
 }
 
-.logo-name-thin{
-    font-weight: 400;
-    color:#aaa
+.logo-name-bold {
+  font-weight: bold;
+  color: #484848;
 }
 
-.navlist{
-    list-style: none;
-    display: flex; /* Display things in a row!!! */
+.logo-name-thin {
+  font-weight: 400;
+  color: #aaa;
 }
 
-.navlist a{
-    display: inline-block ;
-    text-decoration: none;
-    color: #828282;
-    font-size: 1rem;
-
-}
-.nav-item:not(:last-child){
-    margin-right: 1rem;
+.navlist {
+  list-style: none;
+  display: flex; /* Display things in a row!!! */
 }
 
-.nav-item:last-child{
-    margin-right: 1.5rem;
+.navlist a {
+  display: inline-block;
+  text-decoration: none;
+  color: #828282;
+  font-size: 1rem;
+}
+.nav-item:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.nav-item:last-child {
+  margin-right: 1.5rem;
 }
 /* End of the Desktop Nav */
 
 /* Start of the Desktop Header */
-.header-picture{
-    display: flex;
-    background-color: #c8c8c8;
+.header-picture {
+  display: flex;
+  background-color: #c8c8c8;
 }
 
-.header-picture img{
-    padding: 2rem 0 2rem 1.5rem;
-    width: 100%;
-    height: auto;
+.header-picture img {
+  padding: 2rem 0 2rem 1.5rem;
+  width: 100%;
+  height: auto;
 }
 
-.header-content{
-    background-color: #c8c8c8;
-    padding-left: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.header-content {
+  background-color: #c8c8c8;
+  padding-left: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.header-content div h1{
-    font-size: 2.5rem;
-    color: #484848;
+.header-content div h1 {
+  font-size: 2.5rem;
+  color: #484848;
 }
 
-.header-content div h2{
-    font-size: 1rem;
-    font-weight: 500;
-    color: #484848;
-    padding: 1rem 0;
+.header-content div h2 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #484848;
+  padding: 1rem 0;
 }
 
-.header-content div{
-    display: block;
-    width: 80%;
+.header-content div {
+  display: block;
+  width: 80%;
 }
 
-.header-content div a:link{
-    display: block;
-    width:100%;
-    align-self: stretch;
-    margin: 1rem auto;
-    padding: 0.5rem 0;
-    background-color: #4a4a4a;
-    color:#fff;
-    font-size: 0.8rem;
-    text-decoration: none;
-    text-align: center;
+.header-content div a:link {
+  display: block;
+  width: 100%;
+  align-self: stretch;
+  margin: 1rem auto;
+  padding: 0.5rem 0;
+  background-color: #4a4a4a;
+  color: #fff;
+  font-size: 0.8rem;
+  text-decoration: none;
+  text-align: center;
 }
 
-.header-content div a:hover{
-    background-color: rgb(72,72,72,0.5);
+.header-content div a:hover {
+  background-color: rgb(72, 72, 72, 0.5);
 }
 
 .header-content div a:active,
 .header-content div a:visited {
-    color:#fff;
-    text-decoration: none;
-    background-color: #4a4a4a;
+  color: #fff;
+  text-decoration: none;
+  background-color: #4a4a4a;
 }
 /* End of the Desktop Header */
 
 /* Start of Practice Section */
-.practice{
-    background-color: #f0f0f0;
-    padding: 2rem 1.5rem;
+.practice {
+  background-color: #f0f0f0;
+  padding: 2rem 1.5rem;
 }
 
 .practice img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
-.practice h3{
-    padding: 2rem 0 1.5rem 0;
-    color: #484848;
+.practice h3 {
+  padding: 2rem 0 1.5rem 0;
+  color: #484848;
 }
 
-.practice p{
-    font-size: small;
-    color: #484848;
+.practice p {
+  font-size: small;
+  color: #484848;
 }
 
-.quote-name{
-    display: block;
-    margin: 2rem 0;
+.quote-name {
+  display: block;
+  margin: 2rem 0;
+  font-weight: 100;
+  font-size: 0.7rem;
 }
 
-.events{
-    background-color: #f0f0f0;
-    display: grid;
-    grid-template-rows: repeat(3, min-content);
-    border-left: 5px solid #e7e7e7;
+.events {
+  background-color: #f0f0f0;
+  display: grid;
+  grid-template-rows: repeat(3, min-content);
+  border-left: 5px solid #e7e7e7;
 }
 
-.event-block{
-    display: grid;
-    grid-template-columns: 0.35fr 0.65fr;
-    align-items: center;
-    border-bottom: 1px solid #e7e7e7;
-    font-size: small;
-    color: #484848;
+.event-block {
+  display: grid;
+  grid-template-columns: 0.35fr 0.65fr;
+  align-items: center;
+  border-bottom: 1px solid #e7e7e7;
+  font-size: small;
+  color: #484848;
 }
 
-.event-block img{
-    width: 100%;
-    height: auto;
-    padding: 1rem;
+.event-block img {
+  width: 100%;
+  height: auto;
+  padding: 1rem;
 }
 
-.event-block-content{
-    margin: 0 2rem;
-    padding: 1rem;
-
+.event-block-content {
+  margin: 0 2rem;
+  padding: 1rem;
 }
-.event-block-content p{
-    font-size: 0.8rem;
-    padding: 0.5rem 0;
+.event-block-content p {
+  font-size: 0.8rem;
+  padding: 0.5rem 0;
 }
 
 .event-block-content a:link,
 .event-block-content a:active,
 .event-block-content a:visited {
-    color:#6c8fef;
-    font-size: 0.8rem;
-    text-decoration: none;
+  color: #6c8fef;
+  font-size: 0.8rem;
+  text-decoration: none;
 }
 
-.event-block:last-child{
-    background-color: #d8d8d8;
+.event-block:last-child {
+  background-color: #d8d8d8;
+}
+
+.events-mobile {
+  display: none;
 }
 /* End of Practice Section */
 
-/* ************************* */
+/* Start of Learning Section */
+.learning-mobile {
+  display: none;
+}
+
+#learningsection {
+  display: block;
+  grid-column: full--start / full--end;
+  align-items: center;
+  justify-items: center;
+  margin: auto;
+  height: auto;
+  background-color: #eaebec;
+  padding: 1rem 72px 2rem 72px;
+}
+
+.showcasecontainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #484848;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.learningcard {
+  background-color: white;
+  font-size: small;
+  /* padding: 0 1rem 1.5rem 1rem; */
+}
+
+.learningcard img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.learningcard h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #484848;
+  padding: 1rem;
+}
+
+.scope {
+  font-size: 0.7rem;
+  color: #484848;
+}
+
+.learningcard p {
+  font-size: 0.7rem;
+  color: #484848;
+  padding: 0 1rem 0.5rem 1rem;
+  font-weight: 100;
+}
+/* End of Learning Section */
+
+/* Start of Thesis Section */
+.thesis-mobile {
+  display: none;
+}
+
+.thesis {
+  display: block;
+  grid-column: full--start / full--end;
+  align-items: center;
+  justify-items: center;
+  background-color: #fff;
+}
+
+.thesis > .container {
+  display: grid;
+  grid-template-areas:
+    "thesis-title thesis-title ."
+    "thesis-left thesis-right ."
+    ". . .";
+  padding: 0 0.5rem 0 24px;
+  grid-column: full--start / full--end;
+}
+
+.thesis-title {
+  grid-area: thesis-title;
+  /* display: block; */
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #484848;
+  padding: 2rem;
+}
+
+.thesis-left {
+  grid-area: thesis-left;
+  /* display: block; */
+}
+
+.thesis-right {
+  grid-area: thesis-right;
+  background-color: #fff;
+  /* display: block */
+}
+
+.thesis video {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.thesis-left h4 {
+  padding: 24px 0 0 0;
+  font-size: 1.5rem;
+  color: #484848;
+  font-weight: 500;
+}
+
+.thesis-left p {
+  font-size: 0.8rem;
+  color: #484848;
+  padding: 8px 0.2rem 2rem 0;
+  font-weight: 100;
+}
+
+.thesis-right .event-block {
+  background-color: #fff;
+}
+
+.thesis-right .event-block:first-child {
+  background-color: #d8d8d8;
+}
+
+/* End of Thesis Section */
+
+/* Start of Footer */
+footer {
+  display: flex;
+  font-size: 0.8rem;
+  grid-column: full--start/full--end;
+  color: #303646;
+  padding: 1rem 0 1.5rem 1.5rem;
+}
+
+footer p {
+  margin-right: auto;
+}
+
+footer ul {
+  list-style: none;
+  display: flex;
+  margin-right: 1.5rem;
+}
+
+footer ul li:not(:last-child) {
+  margin-right: 1rem;
+}
+
+footer a:link {
+  text-decoration: none;
+  color: #303646;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: rgba(131, 131, 131, 0.5);
+}
+
+footer a:active,
+footer a:visited {
+  text-decoration: none;
+  color: #303646;
+}
+/* End of Footer */
+/* ********************************** */
 /* End of the Desktop View */
 
-
 /* Start of the Mobile View */
-/* TODO */
+/* Start of Mobile Navigation */
+.mobile-nav {
+  display: none;
+}
+/* End of Mobile Navigation */
+
+/* Start of media query */
+@media screen and (max-width: 40rem) /*target size: 640px (40rem) width and below*/ {
+  /* hide desktop-nav */
+  .desktop-nav {
+    display: none;
+  }
+
+  /* display mobile nav */
+  .mobile-nav {
+    display: flex;
+    grid-column: full--start / full--end;
+    align-items: center;
+    height: 4rem;
+    width: auto;
+    justify-content: space-around;
+  }
+
+  /* header content, header picture */
+  .container {
+    max-width: 100dvw;
+  }
+
+  .header-picture {
+    grid-column: full--start / full--end;
+  }
+
+  .header-picture img {
+    padding: 0;
+  }
+
+  .header-content {
+    display: flex;
+    grid-column: full--start / full--end;
+    padding: 2rem 1rem 2rem 1rem;
+  }
+
+  .header-content div h1 {
+    font-size: xx-large;
+    padding: 0 0 2rem 0;
+  }
+
+  .header-content div h2 {
+    font-size: larger;
+    padding: 0 0 0 0;
+  }
+
+  .header-content div {
+    display: block;
+    width: 100%;
+  }
+
+  /* practice, events  */
+  .practice {
+    display: none;
+  }
+
+  .events {
+    display: none;
+  }
+
+  .events-mobile {
+    display: block;
+    grid-column: full--start / full--end;
+    padding: 1rem;
+  }
+
+  .events-mobile .event-block {
+    grid-template-columns: 1fr;
+    background-color: #fff;
+  }
+
+  .events-mobile .event-block img {
+    padding: 0;
+  }
+
+  .events-mobile .event-block-content {
+    padding: 2rem 0 2rem 1rem;
+    margin: 0;
+  }
+
+  .events-mobile .event-block-content h4 {
+    font-size: xx-large;
+    font-weight: 600;
+  }
+
+  .events-mobile .event-block-content p {
+    font-size: large;
+    font-weight: lighter;
+  }
+
+  .events-mobile .event-block-content a:link {
+    font-size: large;
+  }
+
+  /* learning mobile 1 column */
+  #learningsection {
+    display: none;
+  }
+
+  .learning-mobile {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 0.5rem;
+    grid-column: full--start / full--end;
+    padding: 1rem 0 0 0;
+  }
+
+  .learning-mobile h4 {
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.5rem;
+    margin-top: 0%;
+    color: #484848;
+    font-weight: bolder;
+  }
+
+  .learning-mobile li {
+    display: block;
+    align-self: stretch;
+    margin: 0.5rem;
+    padding: 1rem;
+    background-color: #d8d8d8;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #484848;
+  }
+
+  /* Start of mobile-thesis */
+  .thesis {
+    display: none;
+  }
+
+  .thesis-mobile {
+    display: block;
+    grid-column: full--start / full--end;
+    justify-content: center;
+  }
+
+  video {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .thesis-mobile h4 {
+    text-align: center;
+    padding: 1.5rem 0 1rem 0;
+    font-size: 1.5rem;
+    color: #484848;
+    font-weight: bolder;
+  }
+  /* End of mobile-thesis */
+
+  /* Start of mobile-footer */
+  footer {
+    padding-top: 1.5rem;
+    /* border: 1px solid black; */
+  }
+
+  footer p {
+    padding: 1rem 0;
+  }
+
+  footer ul {
+    display: none;
+  }
+}
+/* End of mobile-footer */
 /* End of the Mobile View */
